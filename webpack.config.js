@@ -7,7 +7,7 @@ module.exports = {
 		filename: 'bundle.js',
 		publicPath: '/build/'
 	},
-	devtool: 'eval',
+	devtool: 'cheap-module-source-map',
 	module: {
 		loaders: [
 			{
@@ -20,5 +20,8 @@ module.exports = {
 				loaders: ['style-loader', 'css-loader', 'sass-loader']
 			}
 		]
+	},
+	resolve: {
+		extensions: ['.js', '.jsx']
 	}
 };
